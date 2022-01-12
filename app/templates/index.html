@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="jpn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="検索した時の3行表示されるところ">
+    <meta name="ketwords" content="検索されたときに引っかかるワード">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="css/uikit.min.css" />
+    <title>不動産質問サイト</title>
+</head>
+<body>
+    <header style="text-align:center">
+        <h1>不動産質問サイト</h1>
+        <h2 class='regibutton'>
+            <a href = "choose_membership_type.html">
+                <button type = "button">会員登録</button>
+            </a>
+        </h2>
+        <nav id="gnav">
+            <ul class="inner">
+                <li><a href="index.html">TOP</a></li>
+                <li><a href="questions.html">質問一覧</a></li>
+                <li><a href="answerers.html">回答者一覧</a></li>
+            </ul>
+        </nav>
+    </header>
+    </h2>
+    <div class="explanation_site">
+        <img src="residence-gdda9cd4f7_1920.jpg" />
+        <div class="header_image_title">
+            <p>あなたの疑問をなんでも相談</p>
+        </div>
+        <div class="header_image_sentence">
+            <p>不動産売買のきっかけにも</p>
+        </div>
+    </div>
+    <!--送信先どこにするかのような処理未記載-->
+    <div style="text-align:center">
+        <form action="" method="post">
+            <div>
+                <label for="name">ニックネーム</label>
+                <input type="text" value="" placeholder="ニックネームを入力してください" id="name" name="name">
+            </div>
+            <div>
+                <label for="mail">ジャンル</label>
+                <select name="genre" size="1">
+                    <option value="">ジャンルを選択</option>
+                    <option value="選択肢2">選択肢2</option>
+                    <option value="選択肢3">選択肢3</option>
+                    <option value="選択肢4">選択肢4</option>
+                    <option value="選択肢5">選択肢5</option>
+                    <option value="選択肢6">選択肢6</option>
+                    <option value="選択肢7">選択肢7</option>
+                    </select>
+            </div>
+            <div>
+                <label for="message">質問内容</label>
+                <textarea placeholder="質問を入力してください (最大2000字)" id="message" name="message" cols="50" rows="10"></textarea>
+            </div>
+            <form name="signup" id="form" class="form" method="post" action="/entry/mobile_entry_confirm.php/" data-ajax="false" onSubmit="is_note_msg=false;">
+            <div>
+                <a href="privacypolicy.html">プライバシーポリシーを読む</a>
+            </div>
+            <input type="checkbox" name="agree_privacy" id="agree" value="" autocomplete="off" required="required" />
+            <label for="agree"> プライバシーポリシーを確認し、同意しました。</label>    
+            </form>
+            <input type="submit" value="ゲストとして質問する">
+        </form>
+    </div>
+</body>
+</html>

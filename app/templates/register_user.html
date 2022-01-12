@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="jpn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>不動産質問サイト</title>
+</head>
+<body>
+    <header>
+        <h1>不動産質問サイト</h1>
+        <nav id="gnav">
+            <ul class="inner">
+                <li><a href="index.html">TOP</a></li>
+                <li><a href="questions.html">質問一覧</a></li>
+                <li><a href="answerers.html">回答者一覧</a></li>
+            </ul>
+        </nav>
+    </header>
+    <form method="post" action="test.html">
+        <p>名前</p>
+        <input type="text" maxlength="100" placeholder="山田太郎">
+        <p>名前(ふりがな)</p>
+        <input type="text" maxlength="200" placeholder="やまだたろう">
+        <p>メールアドレス</p>
+        <input type="text" maxlength="254" placeholder="aaaa@gmail.com">
+        <p>パスワード</p>
+        <input type="password" maxlength="20" placeholder="半角英数8文字以上">
+        <p>パスワード再入力</p>
+        <input type="password" maxlength="20" placeholder="半角英数8文字以上">
+        <p>郵便番号</p>
+        <input type="text" maxlength="7" placeholder="ハイフンなし">
+        <p>住所</p>
+        <input type="text" maxlength="200" id="address"/>
+        <p>電話番号</p>
+        <input type="text" maxlength="21" placeholder="ハイフンなし">
+        <p>生年月日</p>
+        <input type="date" name="calendar" max="9999-12-31">
+        <p><input type="submit" value="会員登録を行う"></p>
+        </form>
+</body>
+</html>
