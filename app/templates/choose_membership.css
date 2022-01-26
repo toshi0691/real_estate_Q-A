@@ -5,15 +5,15 @@
 	position: relative;
 	width: 300px;
 	height: 60px;
-	color: rgb(43, 241, 198);
+	color: rgb(26, 27, 27);
 	font-size: 18px;
 	font-weight: 700;
 	text-decoration: none;
 	transition: 0.3s;
 }
 .btn a {
-	background-color: #ceb849;
-	border: 1px solid #ceb849;
+	background-color: #56db18;
+	border: 1px solid #33cea7;
 }
 
 .btn a:hover {

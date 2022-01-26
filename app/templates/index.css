@@ -1,9 +1,13 @@
+/*body{
+    text-align: center;
+    }
+    */
 .regibutton {
     position: relative;
     margin-left: 36.3%;
 }
 #gnav{
-    background-color: #42dfba;
+    background-color: #1fdb83;
     width: 40%;
     margin-left: auto;
     margin-right: auto;
@@ -14,6 +18,7 @@
 }
 .inner a{
     text-decoration: none;
+    color: white;
 }
 #gnav li{
     width: 200px;
