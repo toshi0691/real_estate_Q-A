@@ -26,7 +26,6 @@
     <!--入力エラー分追加-->
     <!--actionに送信先記入-->
     <h2 class="form-ttl">回答者登録フォーム</h2>
-
     <form action="">
         <table class="contact-table">
             <tr>
@@ -55,27 +54,9 @@
                 </td>
               </tr>
               <tr>
-                <th class="contact-item">メールアドレス</th>
+                <th class="contact-item">生年月日</th>
                 <td class="contact-body">
-                  <input type="email" name="メールアドレス" class="form-text" maxlength="254" placeholder="aaaa@gmail.com"/>
-                </td>
-              </tr>
-              <tr>
-                <th class="contact-item">パスワード</th>
-                <td class="contact-body">
-                  <input type="password" name="パスワード" class="form-text" maxlength="20" placeholder="半角英数8文字以上"/>
-                </td>
-              </tr>
-              <tr>
-                <th class="contact-item">パスワード再入力</th>
-                <td class="contact-body">
-                  <input type="password" name="パスワード再入力" class="form-text" maxlength="20" placeholder="半角英数8文字以上"/>
-                </td>
-              </tr>
-              <tr>
-                <th class="contact-item">電話</th>
-                <td class="contact-body">
-                  <input type="tel" name="電話" class="form-text" placeholder="ハイフンなし"/>
+                  <input type="date" name="calender" class="form-text" max="9999-12-31" class="birthday"/>
                 </td>
               </tr>
               <tr>
@@ -157,13 +138,33 @@
                   <input type="text" name="建物" class="form-text" maxlength="50" id="address-building"/>
                 </td>
               </tr>
-              <!--生年月日のプレースホルダーの文字の大きさ後で改善-->
               <tr>
-                <th class="contact-item">生年月日</th>
+                <th class="contact-item">メールアドレス</th>
                 <td class="contact-body">
-                  <input type="date" name="calender" class="form-text" max="9999-12-31" class="birthday"/>
+                  <input type="email" name="メールアドレス" class="form-text" maxlength="254" placeholder="aaaa@gmail.com"/>
                 </td>
-              </tr> 
+              </tr>
+              <tr>
+                <th class="contact-item">パスワード</th>
+                <td class="contact-body">
+                  <input type="password" name="パスワード" class="form-text" maxlength="20" placeholder="半角英数8文字以上"/>
+                </td>
+              </tr>
+              <tr>
+                <th class="contact-item">パスワード再入力</th>
+                <td class="contact-body">
+                  <input type="password" name="パスワード再入力" class="form-text" maxlength="20" placeholder="半角英数8文字以上"/>
+                </td>
+              </tr>
+              <tr>
+                <th class="contact-item">電話番号</th>
+                <td class="contact-body">
+                  <input type="tel" name="電話" class="form-text" placeholder="ハイフンなし"/>
+                </td>
+              </tr>
+
+              <!--生年月日のプレースホルダーの文字の大きさ後で改善-->
+               
               <!--           
               <tr>
                 <th class="contact-item">お問い合わせ内容</th>
@@ -173,9 +174,24 @@
               </tr>
               --> 
         <!-- 後ほど送信ボタンを作成 -->
+        
+      
+      <tr>
+        <td>
+            <div class="policy-read">
+              <a href="privacypolicy.html">プライバシーポリシーを読む</a>
+            </div>
+            <label class="aa">
+            <input type="checkbox" name="agree_privacy" class="policy-read" id="agree" value="" autocomplete="off" required="required" />
+            <span for="agree" class="policy-read-agree"> プライバシーポリシーを確認し、同意しました。</span>    
+          </label>
+          </form>
+        </td>
+      </tr>
+   
         <tr>
             <td>
-                <input class="contact-submit" type="submit" value="送信" />
+                <input class="contact-submit" type="submit" value="登録する" />
             </td>
         </tr>
     </table>

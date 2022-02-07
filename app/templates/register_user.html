@@ -4,11 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="register_user.css">
     <title>不動産質問サイト</title>
 </head>
 <body>
-    <header>
+    <header style="text-align:center">
         <h1>不動産質問サイト</h1>
+        <h2 class='regibutton'>
+            <a href = "choose_membership_type.html">
+                <button type = "button">会員登録</button>
+            </a>
+        </h2>
         <nav id="gnav">
             <ul class="inner">
                 <li><a href="index.html">TOP</a></li>
@@ -17,26 +23,175 @@
             </ul>
         </nav>
     </header>
-    <form method="post" action="test.html">
-        <p>名前</p>
-        <input type="text" maxlength="100" placeholder="山田太郎">
-        <p>名前(ふりがな)</p>
-        <input type="text" maxlength="200" placeholder="やまだたろう">
-        <p>メールアドレス</p>
-        <input type="text" maxlength="254" placeholder="aaaa@gmail.com">
-        <p>パスワード</p>
-        <input type="password" maxlength="20" placeholder="半角英数8文字以上">
-        <p>パスワード再入力</p>
-        <input type="password" maxlength="20" placeholder="半角英数8文字以上">
-        <p>郵便番号</p>
-        <input type="text" maxlength="7" placeholder="ハイフンなし">
-        <p>住所</p>
-        <input type="text" maxlength="200" id="address"/>
-        <p>電話番号</p>
-        <input type="text" maxlength="21" placeholder="ハイフンなし">
-        <p>生年月日</p>
-        <input type="date" name="calendar" max="9999-12-31">
-        <p><input type="submit" value="会員登録を行う"></p>
-        </form>
+    <!--入力エラー分追加-->
+    <!--actionに送信先記入-->
+    <h2 class="form-ttl">質問者登録フォーム</h2>
+    <form action="">
+        <table class="contact-table">
+            <tr>
+                <th class="contact-item">名前</th>
+                <td class="contact-body">
+                  <input type="text" name="名前" class="form-text" placeholder="山田太郎"/>
+                </td>
+              </tr>
+              <tr>
+                <th class="contact-item">名前(ふりがな)</th>
+                <td class="contact-body">
+                  <input type="text" name="名前(ふりがな)" class="form-text" placeholder="やまだたろう"/>
+                </td>
+              </tr>
+              <tr>
+                <th class="contact-item">性別</th>
+                <td class="contact-body">
+                  <label class="contact-sex">
+                    <input type="radio" name="性別" />
+                    <span class="contact-sex-txt">男</span>
+                  </label>
+                  <label class="contact-sex">
+                    <input type="radio" name="性別" />
+                    <span class="contact-sex-txt">女</span>
+                  </label>
+                </td>
+              </tr>
+              <tr>
+                <th class="contact-item">生年月日</th>
+                <td class="contact-body">
+                  <input type="date" name="calender" class="form-text" max="9999-12-31" class="birthday"/>
+                </td>
+              </tr>
+              <tr>
+                <th class="contact-item">郵便番号</th>
+                <td class="contact-body">
+                  <input type="text" name="郵便番号" class="form-text" maxlength="7" placeholder="ハイフンなし"/>
+                </td>
+              </tr>
+              <tr>
+                <th class="contact-item">住所　:　都道府県</th>
+                <td class="contact-body">
+                    <select name="pref2" id="pref2">
+                        <option value="" selected>都道府県</option>
+                        <option value="北海道">北海道</option>
+                        <option value="青森県">青森県</option>
+                        <option value="岩手県">岩手県</option>
+                        <option value="宮城県">宮城県</option>
+                        <option value="秋田県">秋田県</option>
+                        <option value="山形県">山形県</option>
+                        <option value="福島県">福島県</option>
+                        <option value="茨城県">茨城県</option>
+                        <option value="栃木県">栃木県</option>
+                        <option value="群馬県">群馬県</option>
+                        <option value="埼玉県">埼玉県</option>
+                        <option value="千葉県">千葉県</option>
+                        <option value="東京都">東京都</option>
+                        <option value="神奈川県">神奈川県</option>
+                        <option value="新潟県">新潟県</option>
+                        <option value="富山県">富山県</option>
+                        <option value="石川県">石川県</option>
+                        <option value="福井県">福井県</option>
+                        <option value="山梨県">山梨県</option>
+                        <option value="長野県">長野県</option>
+                        <option value="岐阜県">岐阜県</option>
+                        <option value="静岡県">静岡県</option>
+                        <option value="愛知県">愛知県</option>
+                        <option value="三重県">三重県</option>
+                        <option value="滋賀県">滋賀県</option>
+                        <option value="京都府">京都府</option>
+                        <option value="大阪府">大阪府</option>
+                        <option value="兵庫県">兵庫県</option>
+                        <option value="奈良県">奈良県</option>
+                        <option value="和歌山県">和歌山県</option>
+                        <option value="鳥取県">鳥取県</option>
+                        <option value="島根県">島根県</option>
+                        <option value="岡山県">岡山県</option>
+                        <option value="広島県">広島県</option>
+                        <option value="山口県">山口県</option>
+                        <option value="徳島県">徳島県</option>
+                        <option value="香川県">香川県</option>
+                        <option value="愛媛県">愛媛県</option>
+                        <option value="高知県">高知県</option>
+                        <option value="福岡県">福岡県</option>
+                        <option value="佐賀県">佐賀県</option>
+                        <option value="長崎県">長崎県</option>
+                        <option value="熊本県">熊本県</option>
+                        <option value="大分県">大分県</option>
+                        <option value="宮崎県">宮崎県</option>
+                        <option value="鹿児島県">鹿児島県</option>
+                        <option value="沖縄県">沖縄県</option>
+                      </select>  
+                </td>
+              </tr>
+              <tr>
+                <th class="contact-item">　　　:　市区町村</th>
+                <td class="contact-body">
+                  <input type="text" name="市区町村" class="form-text" maxlength="50" id="address-city"/>
+                </td>
+              </tr>
+              <tr>
+                <th class="contact-item">　　　:　番地</th>
+                <td class="contact-body">
+                  <input type="text" name="番地" class="form-text" maxlength="20" id="address-number"/>
+                </td>
+              </tr>
+              <tr>
+                <th class="contact-item">　　　:　建物名・部屋番号</th>
+                <td class="contact-body">
+                  <input type="text" name="建物" class="form-text" maxlength="50" id="address-building"/>
+                </td>
+              </tr>
+              <tr>
+                <th class="contact-item">メールアドレス</th>
+                <td class="contact-body">
+                  <input type="email" name="メールアドレス" class="form-text" maxlength="254" placeholder="aaaa@gmail.com"/>
+                </td>
+              </tr>
+              <tr>
+                <th class="contact-item">パスワード</th>
+                <td class="contact-body">
+                  <input type="password" name="パスワード" class="form-text" maxlength="20" placeholder="半角英数8文字以上"/>
+                </td>
+              </tr>
+              <tr>
+                <th class="contact-item">パスワード再入力</th>
+                <td class="contact-body">
+                  <input type="password" name="パスワード再入力" class="form-text" maxlength="20" placeholder="半角英数8文字以上"/>
+                </td>
+              </tr>
+              <tr>
+                <th class="contact-item">電話番号</th>
+                <td class="contact-body">
+                  <input type="tel" name="電話" class="form-text" placeholder="ハイフンなし"/>
+                </td>
+              </tr>
+
+              <!--生年月日のプレースホルダーの文字の大きさ後で改善-->
+               
+              <!--           
+              <tr>
+                <th class="contact-item">お問い合わせ内容</th>
+                <td class="contact-body">
+                  <textarea name="問い合わせ" class="form-textarea"></textarea>
+                </td>
+              </tr>
+              --> 
+        <!-- 後ほど送信ボタンを作成 -->
+        <tr>
+            <td>
+                <div class="policy-read">
+                  <a href="privacypolicy.html">プライバシーポリシーを読む</a>
+                </div>
+                <label class="aa">
+                <input type="checkbox" name="agree_privacy" class="policy-read" id="agree" value="" autocomplete="off" required="required" />
+                <span for="agree" class="policy-read-agree"> プライバシーポリシーを確認し、同意しました。</span>    
+              </label>
+              </form>
+            </td>
+          </tr>
+        <tr>
+            <td>
+                <input class="contact-submit" type="submit" value="登録する" />
+            </td>
+        </tr>
+    </table>
+    </form>
 </body>
 </html>

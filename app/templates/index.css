@@ -1,10 +1,16 @@
 /*body{
     text-align: center;
     }
-    */
+*/
 .regibutton {
     position: relative;
-    margin-left: 36.3%;
+    margin-left: 33.3%;
+}
+.regibutton > a > button{
+    background-color: turquoise;
+}
+#top-image{
+    width:100%;
 }
 #gnav{
     background-color: #1fdb83;
@@ -13,16 +19,23 @@
     margin-right: auto;
 }
 .inner{
-    display: flex;
-    list-style: none; 
+    display:table;
+    width:100%;
+    padding:0;
 }
+
 .inner a{
     text-decoration: none;
     color: white;
 }
 #gnav li{
-    width: 200px;
+    display:table-cell;
+    width:1%;
+    border:1px solid rgb(14, 13, 13);
+    padding: 3px;
+    background: #1fdb83;
 }
+
 .explanation_site{
     position: relative;
     margin: 0 auto;
@@ -39,5 +52,8 @@
     color: green;
     top: 17px;
     left: 0;
+}
+#message{
+    width: 30%;
 }
 
