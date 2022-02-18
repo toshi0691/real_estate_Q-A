@@ -21,7 +21,7 @@
         </h2>
         <nav id="gnav">
             <ul class="inner">
-                <li><a href="/index">TOP</a></li>
+                <li><a href="/">TOP</a></li>
                 <li><a href="/questions">質問一覧</a></li>
                 <li><a href="/answerers">回答者一覧</a></li>
             </ul>
@@ -38,7 +38,7 @@
     </div>
     <!--送信先どこにするかのような処理未記載-->
     <div style="text-align:center">
-        <form action="" method="post">
+        <form action="" method="POST">
             <div>
                 <label for="name">ニックネーム</label>
                 <input type="text" value="" placeholder="ニックネームを入力してください" id="name" name="name" required>
@@ -57,16 +57,19 @@
             </div>
             <div>
                 <label for="message">質問内容</label>
-                <textarea placeholder="質問を入力してください (最大2000字)" id="message" maxlength="2000" name="message" required></textarea>
+                <textarea placeholder="質問を入力してください (最大2000字)" id="message" maxlength="2000" name="body" required></textarea>
             </div>
-            <form name="signup" id="form" class="form" method="post" action="/entry/mobile_entry_confirm.php/" data-ajax="false" onSubmit="is_note_msg=false;">
+            <!--<form name="signup" id="form" class="form" method="post" action="/entry/mobile_entry_confirm.php/" data-ajax="false" onSubmit="is_note_msg=false;">
+                !-->
                 <div>
                     <a href="\privacypolicy">プライバシーポリシーを読む</a>
                 </div>
                 <input type="checkbox" name="agree_privacy" id="agree" value="" autocomplete="off" required="required" />
                 <label for="agree"> プライバシーポリシーを確認し、同意しました。</label>    
-            </form>
+            <!--</form>
             <input type="submit" value="ゲストとして質問する">
+            !-->
+                <input type="submit" value="送信">
         </form>
     </div>
     <footer>
