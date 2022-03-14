@@ -26,29 +26,29 @@
     <!--入力エラー分追加-->
     <!--actionに送信先記入-->
     <h2 class="form-ttl">質問者登録フォーム</h2>
-    <form action="">
+    <form meyhod="POST">
         <table class="contact-table">
             <tr>
                 <th class="contact-item">名前</th>
                 <td class="contact-body">
-                  <input type="text" name="名前" class="form-text" placeholder="山田太郎"/>
+                  <input type="text" name="username_kannji" class="form-text" placeholder="山田太郎"/>
                 </td>
               </tr>
               <tr>
                 <th class="contact-item">名前(ふりがな)</th>
                 <td class="contact-body">
-                  <input type="text" name="名前(ふりがな)" class="form-text" placeholder="やまだたろう"/>
+                  <input type="text" name="username_hiragana" class="form-text" placeholder="やまだたろう"/>
                 </td>
               </tr>
               <tr>
                 <th class="contact-item">性別</th>
                 <td class="contact-body">
                   <label class="contact-sex">
-                    <input type="radio" name="性別" />
+                    <input type="radio" name="gender" value="男"/>
                     <span class="contact-sex-txt">男</span>
                   </label>
                   <label class="contact-sex">
-                    <input type="radio" name="性別" />
+                    <input type="radio" name="gender" value="女"/>
                     <span class="contact-sex-txt">女</span>
                   </label>
                 </td>
@@ -56,13 +56,13 @@
               <tr>
                 <th class="contact-item">生年月日</th>
                 <td class="contact-body">
-                  <input type="date" name="calender" class="form-text" max="9999-12-31" class="birthday"/>
+                  <input type="date" name="birthday" class="form-text" max="9999-12-31" class="birthday"/>
                 </td>
               </tr>
               <tr>
                 <th class="contact-item">郵便番号</th>
                 <td class="contact-body">
-                  <input type="text" name="郵便番号" class="form-text" maxlength="7" placeholder="ハイフンなし"/>
+                  <input type="text" name="postcode" class="form-text" maxlength="7" placeholder="ハイフンなし"/>
                 </td>
               </tr>
               <tr>
@@ -123,43 +123,53 @@
               <tr>
                 <th class="contact-item">　　　:　市区町村</th>
                 <td class="contact-body">
-                  <input type="text" name="市区町村" class="form-text" maxlength="50" id="address-city"/>
+                  <input type="text" name="address_city" class="form-text" maxlength="60" id="address-city"/>
                 </td>
               </tr>
+              <!--
               <tr>
                 <th class="contact-item">　　　:　番地</th>
                 <td class="contact-body">
                   <input type="text" name="番地" class="form-text" maxlength="20" id="address-number"/>
                 </td>
               </tr>
+              -->
               <tr>
                 <th class="contact-item">　　　:　建物名・部屋番号</th>
                 <td class="contact-body">
-                  <input type="text" name="建物" class="form-text" maxlength="50" id="address-building"/>
+                  <input type="text" name="address_building" class="form-text" maxlength="50" id="address-building"/>
                 </td>
               </tr>
               <tr>
                 <th class="contact-item">メールアドレス</th>
                 <td class="contact-body">
-                  <input type="email" name="メールアドレス" class="form-text" maxlength="254" placeholder="aaaa@gmail.com"/>
+                  <input type="email" name="e_mail" class="form-text" maxlength="254" placeholder="aaaa@gmail.com"/>
                 </td>
               </tr>
+              
+              <tr>
+                <th class="contact-item">ログインID</th>
+                <td class="contact-body">
+                  <input type="text" name="login_id" class="form-text" maxlength="20" id="loginid1111"/>
+                </td>
+              </tr>
+              
               <tr>
                 <th class="contact-item">パスワード</th>
                 <td class="contact-body">
-                  <input type="password" name="パスワード" class="form-text" maxlength="20" placeholder="半角英数8文字以上"/>
+                  <input type="password" name="password" class="form-text" minlength="8" maxlength="15" placeholder="半角英数8文字以上15文字以下"/>
                 </td>
               </tr>
               <tr>
                 <th class="contact-item">パスワード再入力</th>
                 <td class="contact-body">
-                  <input type="password" name="パスワード再入力" class="form-text" maxlength="20" placeholder="半角英数8文字以上"/>
+                  <input type="password" name="password_confirm" class="form-text" minlength="8" maxlength="15" placeholder="半角英数8文字以上15文字以下"/>
                 </td>
               </tr>
               <tr>
                 <th class="contact-item">電話番号</th>
                 <td class="contact-body">
-                  <input type="tel" name="電話" class="form-text" placeholder="ハイフンなし"/>
+                  <input type="tel" name="phone_number" class="form-text" placeholder="ハイフンなし"/>
                 </td>
               </tr>
 
@@ -180,7 +190,7 @@
                   <a href="/privacypolicy">プライバシーポリシーを読む</a>
                 </div>
                 <label class="aa">
-                <input type="checkbox" name="agree_privacy" class="policy-read" id="agree" value="" autocomplete="off" required="required" />
+                <input type="checkbox" name="agree_privacy" class="policy-read" id="agree" value="同意" autocomplete="off" required="required" />
                 <span for="agree" class="policy-read-agree"> プライバシーポリシーを確認し、同意しました。</span>    
               </label>
               </form>
