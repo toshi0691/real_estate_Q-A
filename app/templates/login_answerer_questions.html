@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="jpn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="\static\index.css">
+    <link rel="stylesheet" href="\static\questions.css">
+    <title>不動産質問サイト</title>
+</head>
+<body>
+    <header style="text-align:center">
+        <h1>不動産質問サイト</h1>
+        <h2 class='regibutton'>
+            <a href = "/choose_membership_type">
+                <button type = "button">会員登録</button>
+            </a>
+        </h2>
+        <nav id="gnav">
+            <ul class="inner">
+                <li><a href="/">TOP</a></li>
+                <li><a href="/questions">質問一覧</a></li>
+                <li><a href="/answerers">回答者一覧</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="q-card">
+        <div class="q-first">
+            <h1 class="q-head">{{ askQuestion.nickname }}</h1>
+            <h2 class="q-head">{{ askQuestion.genre }}</h2>
+            <div class="q-detail">
+                <h2 class="q-head" >質問内容</h2>
+                <div class="q-detail">
+                    {{ askQuestion.body }}
+                    ～で～の営業活動をしています。いま穴場の物件を多数紹介いたします。
+                </div>
+            </div>
+        </div>
+        <div class="q-second">
+            <h1 class="q-head">匿名</h1>
+            <h2 class="q-head">不動産投資</h2>
+           
+            <div class="q-detail">
+                <h2 class="q-head" >質問内容</h2>
+                <div class="q-detail">
+                    ～で～の営業活動をしています。いま穴場の物件を多数紹介いたします。
+                </div>
+            </div>
+        </div>
+        <div class="q-third">
+            <h1 class="q-head">匿名</h1>
+            <h2 class="q-head">不動産投資</h2>
+            <div class="q-detail">
+                <h2 class="q-head" >質問内容</h2>
+                <div class="q-detail">
+                    ～で～の営業活動をしています。いま穴場の物件を多数紹介いたします。
+                </div>
+            </div>
+        </div>
+        <div class="q-forth">
+            <h1 class="q-head">匿名</h1>
+            <h2 class="q-head">不動産投資</h2>
+            <div class="q-detail">
+                <h2 class="q-head" >質問内容</h2>
+                <div class="q-detail">
+                    ～で～の営業活動をしています。いま穴場の物件を多数紹介いたします。
+                </div>
+            </div>
+        </div>
+        <div class="q-fifth">
+            <h1 class="q-head">匿名</h1>
+            <h2 class="q-head">不動産投資</h2>
+            <div class="q-detail">
+                <h2 class="q-head" >質問内容</h2>
+                <div class="q-detail">
+                    ～で～の営業活動をしています。いま穴場の物件を多数紹介いたします。
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
