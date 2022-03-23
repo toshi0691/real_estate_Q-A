@@ -1,0 +1,19 @@
+.privacy-policy {
+    max-width: 300px;
+    
+    margin: 50px auto;
+    height: 300px;
+    overflow: scroll;
+    padding: 25px;
+    border: 1px solid black;
+    background-color: #e5e5e5;
+    line-height: 1.5;
+    &__item {
+      p {
+        margin-bottom: 25px;
+      }
+    }
+}
+.back{
+    margin-left: 57.8%;
+}

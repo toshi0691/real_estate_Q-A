@@ -1,0 +1,43 @@
+.btn a {
+  display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	width: 300px;
+	height: 60px;
+	color: rgb(26, 27, 27);
+	font-size: 18px;
+	font-weight: 700;
+	text-decoration: none;
+	transition: 0.3s;
+}
+.btn a {
+	background-color: #56db18;
+	border: 1px solid #33cea7;
+}
+
+.btn a:hover {
+	background-color: #B99b00;
+	border: 1px solid #333;
+}
+
+
+.btn {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn > .register_user_button {
+  height: 50px;
+  right:40px;
+  padding: 20px;
+  top: 150px
+}
+
+.btn > .register_answerer_button {
+  height: 50px;
+  left: 40px;
+  padding: 20px;
+  top: 150px;
+}

@@ -1,0 +1,97 @@
+.form-ttl{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.regiform {
+    
+    margin: auto;
+}
+
+.contact-table {
+    width: 40%;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.contact-item,
+ .contact-body {
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+  
+.contact-item {
+    text-align: left;
+    width: 30%;
+    background-color: #eee;
+}
+  
+.contact-body {
+    width: 70%;
+}
+#address-city{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    max-width: 600px;
+}
+.form-text{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    max-width: 300px;
+}
+#pref2{
+    width: 22%;
+    margin: 1rem 0 0 0;
+    background: #ccc;
+    font-size: 0.9em;
+    color: #444;
+    padding: 0.5rem;
+    line-height: 1.0;
+}
+.contact-submit {
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+    display: block;
+    margin-left: 100%;
+    margin-top: 1em;
+    font-size: 16px;
+    padding: 15px;
+    border-radius: 100vh;
+    border: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+  }
+.policy-read{
+    margin-left:106%;
+    width: 100%;
+}
+input > .policy-read {
+
+    margin-left: 100%;
+    
+}
+.aa{
+    display: inline;
+
+}
+.policy-read-agree{
+    display: block;
+    margin-left: 100%;
+    width: 100%;
+}

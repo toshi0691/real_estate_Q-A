@@ -1,0 +1,87 @@
+.regibutton {
+    position: relative;
+    margin-left: 33.3%;
+}
+.regibutton > a > button{
+    background-color: turquoise;
+}
+#top-image{
+    width:100%;
+}
+#gnav{
+    background-color: #1fdb83;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.inner{
+    display:table;
+    width:100%;
+    padding:0;
+}
+
+.inner a{
+    text-decoration: none;
+    color: white;
+}
+#gnav li{
+    display:table-cell;
+    width:1%;
+    border:1px solid rgb(14, 13, 13);
+    padding: 3px;
+    background: #1fdb83;
+}
+.explanation_site{
+    position: relative;
+    margin: 0 auto;
+    width: 40%;
+}
+.explanation_site > .header_image_title > p {
+    position: absolute;
+    color: green;
+    top: 0;
+    left: 0;
+}
+.explanation_site > .header_image_sentence > p {
+    position: absolute;
+    color: green;
+    top: 17px;
+    left: 0;
+}
+#message{
+    width: 30%;
+    height: 150px;
+}
+textarea{
+    resize:none;
+    padding:0.5em;
+}
+body{
+    position: relative;
+}
+footer {
+    bottom: 0;
+    margin-top: 150px;
+    width: 40%;
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #1fdb83;
+    text-align: center;
+}
+#footer_nav li{
+    display:table-cell;
+    width:1%;
+    border:1px solid rgb(14, 13, 13);
+    padding: 3px;
+    background: #1fdb83;
+}
+.footer_inner {
+    display:table;
+    width:100%;
+    padding:0;
+}
+.footer_inner a{
+    text-decoration: none;
+    color: white;
+}
