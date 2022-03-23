@@ -26,7 +26,7 @@
     <!--入力エラー分追加-->
     <!--actionに送信先記入-->
     <h2 class="form-ttl">質問者登録フォーム</h2>
-    <form meyhod="POST">
+    <form method="POST" enctype="multipart/form-data">
         <table class="contact-table">
             <tr>
                 <th class="contact-item">名前</th>
@@ -190,10 +190,9 @@
                   <a href="/privacypolicy">プライバシーポリシーを読む</a>
                 </div>
                 <label class="aa">
-                <input type="checkbox" name="agree_privacy" class="policy-read" id="agree" value="同意" autocomplete="off" required="required" />
-                <span for="agree" class="policy-read-agree"> プライバシーポリシーを確認し、同意しました。</span>    
-              </label>
-              </form>
+                  <input type="checkbox" name="agree_privacy" class="policy-read" id="agree" value="同意" autocomplete="off" required="required"/>
+                  <span for="agree" class="policy-read-agree"> プライバシーポリシーを確認し、同意しました。</span>    
+                </label>
             </td>
           </tr>
         <tr>

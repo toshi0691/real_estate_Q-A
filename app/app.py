@@ -33,7 +33,7 @@ class User(UserMixin, db.Model):
     name_kannji = db.Column(db.String(10), nullable=False)
     name_hiragana = db.Column(db.String(20), nullable=False)
     gender = db.Column(db.String(1), nullable=False)
-    birthday = db.Column(db.Integer, primary_key=True)
+    birthday = db.Column(db.Integer, nullable=False)
     postcode = db.Column(db.Integer, nullable=False)
     address_pref = db.Column(db.String(4), nullable=False)
     address_city = db.Column(db.String(60), nullable=False)
@@ -45,7 +45,27 @@ class User(UserMixin, db.Model):
     password_confirm = db.Column(db.String(15), nullable=False)
     phone_number = db.Column(db.String(20), nullable=False)
     policy_confirm = db.Column(db.String(2), nullable=False)
-
+    
+    #answererのテーブルをこの中に作る
+'''
+class Answerer(UserMixin, db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name_kannji = db.Column(db.String(10), nullable=False)
+    name_hiragana = db.Column(db.String(20), nullable=False)
+    gender = db.Column(db.String(1), nullable=False)
+    birthday = db.Column(db.Integer, nullable=False)
+    postcode = db.Column(db.Integer, nullable=False)
+    address_pref = db.Column(db.String(4), nullable=False)
+    address_city = db.Column(db.String(60), nullable=False)
+    #address_number = db.Column(db.String(20), nullable=False)
+    address_building = db.Column(db.String(50), nullable=False)
+    e_mail = db.Column(db.String(70), nullable=False)
+    login_id = db.Column(db.String(20), nullable=False)
+    password = db.Column(db.String(15), nullable=False)
+    password_confirm = db.Column(db.String(15), nullable=False)
+    phone_number = db.Column(db.String(20), nullable=False)
+    policy_confirm = db.Column(db.String(2), nullable=False)
+'''
 # db.create_all()
 
 #「/」へアクセスがあった場合に、"Hello World"の文字列を返す
@@ -86,6 +106,11 @@ def questions():
 def answerers():
     return render_template("answerers.html")
 
+@app.route("/login_user_index")
+@login_required
+def login_user_index():
+    return render_template("login_user_index.html")
+
 @app.route("/choose_membership_type")
 def choose_membership_type():
     return render_template("choose_membership_type.html")
@@ -100,6 +125,7 @@ def register_answerer():
 
 @app.route("/register_user", methods=['GET', 'POST'])
 def register_user():
+    print(request.method)
     if request.method == 'POST':
         name_kannji = request.form.get('username_kannji')
         name_hiragana = request.form.get('username_hiragana')
@@ -114,7 +140,7 @@ def register_user():
         password = request.form.get('password')
         password_confirm = request.form.get('password_confirm')
         phone_number = request.form.get('phone_number')
-        policy_confirm = request.form.get('agree_policy')
+        policy_confirm = request.form.get('agree_privacy')
         user = User(name_kannji=name_kannji, name_hiragana=name_hiragana, gender=gender, birthday=birthday, postcode=postcode,\
         address_pref=address_pref, address_city=address_city, address_building=address_building, e_mail=e_mail,\
         login_id=login_id, password=generate_password_hash(password, method='sha256'),\
@@ -122,26 +148,56 @@ def register_user():
         user_copy = copy.deepcopy(user)
         db.session.add(user)
         db.session.commit()
-        return redirect('login.html')
+        return redirect('/login')
     else:
         return render_template("register_user.html")
 
 @app.route("/login", methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
-        username = User.query.filter_by(username=username).first()
+        login_id = request.form.get('login_id')
+        password = request.form.get('password')
+        user = User.query.filter_by(login_id=login_id).first()
         if check_password_hash(user.password, password):
             login_user(user)
-            return redirect('/')
-        #例外処理必要
+            return redirect('/login_user_index') #例外処理必要 
     else:
         return render_template('login.html')
-
+'''  
+@app.route("/register_answerer", methods=['GET', 'POST'])
+def register_answerer():
+    print(request.method)
+    if request.method == 'POST':
+        name_kannji = request.form.get('username_kannji')
+        name_hiragana = request.form.get('username_hiragana')
+        gender = request.form.get('gender')
+        birthday = request.form.get('birthday')
+        postcode = request.form.get('postcode')
+        address_pref = request.form.get('pref2')
+        address_city = request.form.get('address_city')
+        address_building = request.form.get('address_building')
+        e_mail = request.form.get('e_mail')
+        login_id = request.form.get('login_id')
+        password = request.form.get('password')
+        password_confirm = request.form.get('password_confirm')
+        phone_number = request.form.get('phone_number')
+        policy_confirm = request.form.get('agree_privacy')
+        user = User(name_kannji=name_kannji, name_hiragana=name_hiragana, gender=gender, birthday=birthday, postcode=postcode,\
+        address_pref=address_pref, address_city=address_city, address_building=address_building, e_mail=e_mail,\
+        login_id=login_id, password=generate_password_hash(password, method='sha256'),\
+        password_confirm=generate_password_hash(password_confirm, method='sha256'), phone_number=phone_number, policy_confirm=policy_confirm)
+        user_copy = copy.deepcopy(user)
+        db.session.add(user)
+        db.session.commit()
+        return redirect('/login')
+    else:
+        return render_template("register_user.html")
+'''
 @app.route('/logout')
 @login_required #←loginしているユーザしかこの以下はアクセスできなくなるという書き方
 def logout():
     logout_user()
-    return redirect('/login')
+    return redirect('/')
 
 #おまじない
 if __name__ == "__main__":
